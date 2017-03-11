@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<style>
+body {
+	font-family: "Inconsolata";
+	margin:0;
+	padding:0;
+	border:0;
+	}
+.panel {
+	height:100%;
+	width:100%;
+	position:relative;
+	padding:10px;
+	}
+.title {
+	height:40px;
+	width:100%;
+	background:#C05CFF;
+	}
+.square {
+	height:150px;
+	width:150px;
+	background:#CF81FF;
+	border-radius:25px;
+	position:absolute;
+	}
+.code {
+	background: #A9C4CD;
+	}
+</style>
+<body>
+<div class="title" id="title"><h1 style="color:white;">CODING CLUB</h1></div>
+<div class="contents">
+<div class="panel" style="background:#FFFFFF;"><h2>What is this site?</h2></div>
+<div class="panel" style="background:#EEEEEE;">
+<h2>Python Excercises</h2>
+<div id="currex" style="height:30%;width:90%;background:#DDDDDD;overflow:scroll;padding:20px;"><h1>Click a button!</h1></div>
+<h3>Excercise List</h3>
+<div style="height:40%;width:90%;background:#DDDDDD;overflow:scroll;padding:20px;">
+<button class="square" onclick="document.getElementById('currex').innerHTML = '<h3>Ascii Artist [676767]</h3><p>In any programming language, the first thing you should do is learn to \'print\'.<br>Printing in Python is done via<br><span class=\'code\'>print(\'Words\')</span><br>and line breaks are written as <br><span class=\'code\'>print(\'More\\nWords\')</span><br>which is printed as <br>More<br>Words<br>with a line break.<br>Ascii art is when people draw things in letters. For example:,<br>  ___ <br>/\'_\'\\<br>\\____/<br><br>Try and draw a picture using Python!<br>NOTE: If you need to draw \\, you need to write it out twice in Python</p>'" style="background: url(https://s-media-cache-ak0.pinimg.com/236x/41/9a/b2/419ab2116c5c218a3fb6adaf3e8e8400.jpg) -40px -5px no-repeat;"></button>
+<script>var whatsurname = "<h3>Who Are You? [546789]</h3><p>So, now you need to learn to input into Python, and use variables. Variables are like boxes you put information in to take out later. So, let\'s try and make a program to ask for your name and repeat it back to you. Here\'s some bits of code you can use!<br><span class='code'>code = 'fun'<br>input('How fun is coding?')<br>print('Coding is '+code)</span></p>"</script>
+<button class="square" onclick="document.getElementById('currex').innerHTML = whatsurname" style="left:200;background: url(https://cdn0.vox-cdn.com/images/verge/default-avatar.v989902574302a6378709709f7baab789b242ebbb.gif) -40px -50px no-repeat;"></button>
+<script>var whatsurnametwo = "<h3>Little Sibling Simulator [987973]</h3><p>Now that you can code basics in Python, it's time to learn to loop. So, a loop in Python is made up of certain components.<br><span class='code'>while Condition<br>    action</span><br>That's the the general formula for the a loop.<br>Here's the thing though: you can substitute 'True' for a condition and make it go forever.<br>You know how little siblings always keep going 'Why?' and when you explain something they ask 'Why?' again?<br>Try and make a Python program that does that.</p>"</script>
+<button class="square" onclick="document.getElementById('currex').innerHTML = whatsurnametwo" style="left:375;"></button>
+<button class="square" style="left:550;"></button>
+</div></div>
+</div>
+	<iframe width="100%" height="100%" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1MnJptpdCyM18su-z03evEvoOiBgSI8FyuQFBmVfYgAg/pubchart?oid=1315546518&amp;format=interactive"></iframe>
+<div class="panel" style="background:#EEEEEE">
+<h2>Account</h2>
+<a href="https://docs.google.com/a/wis.edu.hk/forms/d/e/1FAIpQLSevZwhSclQmpDj_0fIEFyUBYvsXY3qSgBHBT3FsF-GDA_0sIQ/viewform?usp=sf_link"><button class="square" style="position:relative;left:30%;color:white;font-size:25px;">REGISTER</button></a><a href="https://docs.google.com/a/wis.edu.hk/forms/d/e/1FAIpQLSeX0CSya_7DXELXW78RuQ8EO2v2IR8fkkuiMtpj8-QoV5fePg/viewform?usp=sf_link"><button class="square" style="position:relative;top:-11;left:40%;color:white;font-size:20px;">SUBMIT ASSIGNMENT</button></a>
+</div>
+</body>
