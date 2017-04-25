@@ -1,0 +1,87 @@
+<style>
+body {
+  font-family:"Open Sans";
+	margin:0px;
+}
+</style>
+<div style="width:80%;height:100%;background:lightgrey;text-align:center; float:left;">
+	<h1>DESIGN YOUR OWN PENCILCASE</h1>
+	<img id="mainbase" src="resources/case/bluebase.png" style="height:200px;position:absolute;left:35%;">
+	<img id="maintop" src="resources/case/bluebase.png" style="height:200px;position:absolute;left:35%;">
+<div id="shopping cart" style="background:#BFBFBF;overflow:scroll;position:absolute;top:70%;height:30%;width:80%;"></div>
+</div>
+<div style="width:20%;height:100%;background:#CACACA;text-align:center; float:left;overflow:scroll;display: inline-block;">
+<h3>MENU</h3>
+<h4>Base</h4>
+<select id="base">
+  <option value="blue">Blue</option>
+  <option value="pink">Pink</option>
+  <option value="red">Red</option>
+  <option value="cat">Cat</option>
+  <option value="cow">Cow</option>
+</select>
+<h4>Top</h4>
+<select id="topper">
+  <option value="blue">Blue</option>
+  <option value="pink">Pink</option>
+  <option value="red">Red</option>
+  <option value="cat">Cat</option>
+  <option value="cow">Cow</option>
+</select>
+<h4>Stationery</h4>
+<select id="quip">
+  <option value="pencil">Pencil</option>
+  <option value="pen">Pen (black)</option>
+  <option value="redpen">Pen (red)</option>
+  <option value="eraser">Eraser</option>
+  <option value="sharpener">Sharpener</option>
+  <option value="hiliter">Highlighters [pack]</option>
+  <option value="ruler">Ruler</option>
+  <option value="colorpencils">Color Pencils [pack]</option>
+  <option value="scissors">Scissors</option>
+  <option value="stapler">Stapler</option>
+</select>
+<button onclick="list.push(add);">ADD</button>
+<h4 id="cost">$100</h4><button>BUY</button>
+</div>
+<script>
+var costs = {
+	"pencil":6,
+	"eraser":5,
+	"sharpener":15,
+	"hiliter":30,
+	"colorpencils":30,
+	"ruler":10,
+	"scissors":20,
+	"stapler":30,
+	"pen":8,
+	"redpen":8
+	}
+var list = []
+function removeX(z) {
+	for(var i = 0; i<list.length; i++)
+		if (list[i] == z){
+			list.splice(i,1);
+			break;
+			}
+	}
+setInterval(function(){
+	base = document.getElementById("base").value
+	document.getElementById("mainbase").src="resources/case/"+base+"base.png"
+	topper = document.getElementById("topper").value
+	document.getElementById("maintop").src="resources/case/"+topper+"top.png"
+	list.sort();
+	add = document.getElementById("quip").value
+	x = ""
+	for(var i = 0; i < list.length; i++){
+    x = x + "<img style='height:30%' onclick='removeX(\""+ list[i] +"\")' src='resources/item/" + list[i] + ".png'>";
+    document.getElementById("shopping cart").innerHTML = x;
+};
+	x=100
+	for(var i = 0; i < list.length; i++){
+    x += costs[list[i]]
+    document.getElementById("cost").innerHTML = "$" + x;
+};
+	}, 300);
+	
+</script>
