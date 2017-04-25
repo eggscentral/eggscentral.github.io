@@ -7,8 +7,8 @@ body {
 </style>
 <div style="width:80%;height:100%;background:lightgrey;text-align:center; float:left;">
 	<h1>DESIGN YOUR OWN PENCILCASE</h1>
-	<img id="mainbase" src="resources/case/bluebase.png" style="height:200px;position:absolute;left:35%;">
-	<img id="maintop" src="resources/case/bluebase.png" style="height:200px;position:absolute;left:35%;">
+	<img id="mainbase" src="https://eggscentral.github.io/resources/case/bluebase.png" style="height:200px;position:absolute;left:35%;">
+	<img id="maintop" src="https://eggscentral.github.io/resources/case/bluebase.png" style="height:200px;position:absolute;left:35%;">
 <div id="shopping cart" style="background:#BFBFBF;overflow:scroll;position:absolute;top:70%;height:30%;width:80%;"></div>
 </div>
 <div style="width:20%;height:100%;background:#CACACA;text-align:center; float:left;overflow:scroll;display: inline-block;">
@@ -68,14 +68,14 @@ function removeX(z) {
 	}
 setInterval(function(){
 	base = document.getElementById("base").value
-	document.getElementById("mainbase").src="resources/case/"+base+"base.png"
+	document.getElementById("mainbase").src="https://eggscentral.github.io/resources/case/"+base+"base.png"
 	topper = document.getElementById("topper").value
-	document.getElementById("maintop").src="resources/case/"+topper+"top.png"
+	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/"+topper+"top.png"
 	list.sort();
 	add = document.getElementById("quip").value
 	x = ""
 	for(var i = 0; i < list.length; i++){
-    x = x + "<img style='height:30%' onclick='removeX(\""+ list[i] +"\")' src='resources/item/" + list[i] + ".png'>";
+    x = x + "<img style='height:30%' onclick='removeX(\""+ list[i] +"\")' src='https://eggscentral.github.io/resources/item/" + list[i] + ".png'>";
     document.getElementById("shopping cart").innerHTML = x;
 };
 	x=100
