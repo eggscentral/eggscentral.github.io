@@ -96,7 +96,9 @@ setInterval(function(){
 	document.getElementById("custom").display = "inline"
 	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/customtop.png"
 	document.getElementById("mainbase").src=document.getElementById("urly").value
-	} else {
+	}
+	
+	if (document.getElementById("picker").value == "default") {
 	document.getElementById("basic").display = "inline"
 	document.getElementById("custom").display = "none"
 	base = document.getElementById("base").value
