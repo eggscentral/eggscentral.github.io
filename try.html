@@ -25,7 +25,7 @@ body {
 	<h4>Image url</h4>
 		<input id="urly">
 	</div>
-<div id="basic"style="display:inline;">
+<div id="basicbox" style="display:inline;">
 <h4>Base</h4>
 <select id="base">
   <option value="blue">Blue</option>
@@ -52,6 +52,7 @@ body {
   <option value="cat">Cat</option>
   <option value="cow">Cow</option>
 </select>
+</div>
 <h4>Stationery</h4>
 <select id="quip">
   <option value="pencil">Pencil</option>
@@ -66,7 +67,6 @@ body {
   <option value="stapler">Stapler</option>
 </select>
 <button onclick="list.push(add);">ADD</button>
-</div>
 <h4 id="cost">$100</h4><button>BUY</button>
 </div>
 <script>
@@ -92,15 +92,15 @@ function removeX(z) {
 	}
 setInterval(function(){
 	if (document.getElementById("picker").value == "custom"){
-	document.getElementById("basic").display = "none"
-	document.getElementById("custom").display = "inline"
+	document.getElementById("basic").display = "hidden"
+	document.getElementById("custom").visibility = "visible"
 	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/customtop.png"
 	document.getElementById("mainbase").src=document.getElementById("urly").value
 	}
 	
 	if (document.getElementById("picker").value == "default") {
-	document.getElementById("basic").display = "inline"
-	document.getElementById("custom").display = "none"
+	document.getElementById("basic").visibility = "visible"
+	document.getElementById("custom").visibility = "hidden"
 	base = document.getElementById("base").value
 	document.getElementById("mainbase").src="https://eggscentral.github.io/resources/case/"+base+"base.png"
 	topper = document.getElementById("topper").value
