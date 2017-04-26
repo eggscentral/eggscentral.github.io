@@ -109,6 +109,7 @@ setInterval(function(){
 	list.sort();
 	add = document.getElementById("quip").value
 	x = ""
+	document.getElementById("shopping cart").innerHTML = x;
 	for(var i = 0; i < list.length; i++){
     x = x + "<img style='height:30%' onclick='removeX(\""+ list[i] +"\")' src='https://eggscentral.github.io/resources/item/" + list[i] + ".png'>";
     document.getElementById("shopping cart").innerHTML = x;
