@@ -21,11 +21,11 @@ body {
 		<option value="custom">Custom Design</option>
 		<option value="custom">Default Design</option>
 	</select>
-	<div id="custom">
+	<div id="custom" style="display:inline;">
 	<h4>Image url</h4>
 		<input id="urly">
 	</div>
-<div id="basic">
+<div id="basic"style="display:inline;">
 <h4>Base</h4>
 <select id="base">
   <option value="blue">Blue</option>
@@ -93,10 +93,12 @@ function removeX(z) {
 setInterval(function(){
 	if (document.getElementById("picker").value == "custom"){
 	document.getElementById("basic").display = "none"
-	document.getElementById("custom").display = "none"
+	document.getElementById("custom").display = "inline"
 	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/customtop.png"
 	document.getElementById("mainbase").src=document.getElementById("urly").value
-	}else {
+	} else {
+	document.getElementById("basic").display = "inline"
+	document.getElementById("custom").display = "none"
 	base = document.getElementById("base").value
 	document.getElementById("mainbase").src="https://eggscentral.github.io/resources/case/"+base+"base.png"
 	topper = document.getElementById("topper").value
