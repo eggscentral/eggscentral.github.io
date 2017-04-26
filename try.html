@@ -21,11 +21,11 @@ body {
 		<option value="custom">Custom Design</option>
 		<option value="default">Default Design</option>
 	</select>
-	<div id="custom" style="display:inline;">
+	<div id="custom" style="visibility:visible;">
 	<h4>Image url</h4>
 		<input id="urly">
 	</div>
-<div id="basicbox" style="display:inline;">
+<div id="basicbox" style="visibility:visible;">
 <h4>Base</h4>
 <select id="base">
   <option value="blue">Blue</option>
@@ -92,19 +92,19 @@ function removeX(z) {
 	}
 setInterval(function(){
 	if (document.getElementById("picker").value == "custom"){
-	document.getElementById("basic").display = "hidden"
-	document.getElementById("custom").visibility = "visible"
-	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/customtop.png"
-	document.getElementById("mainbase").src=document.getElementById("urly").value
+	document.getElementById("basicbox").display = "hidden";
+	document.getElementById("custom").visibility = "visible";
+	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/customtop.png";
+	document.getElementById("mainbase").src=document.getElementById("urly").value;
 	}
 	
 	if (document.getElementById("picker").value == "default") {
-	document.getElementById("basic").visibility = "visible"
-	document.getElementById("custom").visibility = "hidden"
-	base = document.getElementById("base").value
-	document.getElementById("mainbase").src="https://eggscentral.github.io/resources/case/"+base+"base.png"
-	topper = document.getElementById("topper").value
-	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/"+topper+"top.png"
+	document.getElementById("basicbox").visibility = "visible";
+	document.getElementById("custom").visibility = "hidden";
+	base = document.getElementById("base").value;
+	document.getElementById("mainbase").src="https://eggscentral.github.io/resources/case/"+base+"base.png";
+	topper = document.getElementById("topper").value;
+	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/"+topper+"top.png";
 	}
 	list.sort();
 	add = document.getElementById("quip").value
@@ -113,9 +113,12 @@ setInterval(function(){
     x = x + "<img style='height:30%' onclick='removeX(\""+ list[i] +"\")' src='https://eggscentral.github.io/resources/item/" + list[i] + ".png'>";
     document.getElementById("shopping cart").innerHTML = x;
 };
-	x=100
+	x=100;
 	for(var i = 0; i < list.length; i++){
-    x += costs[list[i]]
+    x += costs[list[i]];
+	if (document.getElementById("picker").value == "custom"){
+	x+=100;
+	}
     document.getElementById("cost").innerHTML = "$" + x;
 };
 	}, 300);
