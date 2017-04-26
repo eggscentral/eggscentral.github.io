@@ -116,11 +116,11 @@ setInterval(function(){
 	x=100;
 	for(var i = 0; i < list.length; i++){
     x += costs[list[i]];
+    document.getElementById("cost").innerHTML = "$" + x;
+};
 	if (document.getElementById("picker").value == "custom"){
 	x+=100;
 	}
-    document.getElementById("cost").innerHTML = "$" + x;
-};
 	}, 300);
 	
 </script>
