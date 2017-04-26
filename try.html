@@ -114,13 +114,13 @@ setInterval(function(){
     document.getElementById("shopping cart").innerHTML = x;
 };
 	x=100;
+		if (document.getElementById("picker").value == "custom"){
+	x+=100;
+	}
 	for(var i = 0; i < list.length; i++){
     x += costs[list[i]];
     document.getElementById("cost").innerHTML = "$" + x;
 };
-	if (document.getElementById("picker").value == "custom"){
-	x+=100;
-	}
 	}, 300);
 	
 </script>
