@@ -4,6 +4,9 @@ body {
   font-family:"Open Sans";
 	margin:0px;
 }
+	image{
+	object-fit: cover;
+	}
 </style>
 <div style="width:80%;height:100%;background:lightgrey;text-align:center; float:left;">
 	<h1>DESIGN YOUR OWN PENCILCASE</h1>
@@ -13,6 +16,15 @@ body {
 </div>
 <div style="width:20%;height:100%;background:#CACACA;text-align:center; float:left;overflow:scroll;display: inline-block;">
 <h3>MENU</h3>
+	<select id="picker">
+		<option value="custom">Custom Design</option>
+		<option value="custom">Default Design</option>
+	</select>
+	<div id="custom">
+	<h4>Image url</h4>
+		<input id="urly">
+	</div>
+<div id="basic">
 <h4>Base</h4>
 <select id="base">
   <option value="blue">Blue</option>
@@ -53,8 +65,8 @@ body {
   <option value="stapler">Stapler</option>
 </select>
 <button onclick="list.push(add);">ADD</button>
+</div>
 <h4 id="cost">$100</h4><button>BUY</button>
-	<input></input>
 </div>
 <script>
 var costs = {
@@ -78,10 +90,16 @@ function removeX(z) {
 			}
 	}
 setInterval(function(){
+	if (document.getElementById("picker").value == "custom"){
+	document.getElementById("basic").display = "none"
+	document.getElementById("custom").display = "none"
+	document.getElementById("mainbase").src=document.getElementById("urly").value
+	}else {
 	base = document.getElementById("base").value
 	document.getElementById("mainbase").src="https://eggscentral.github.io/resources/case/"+base+"base.png"
 	topper = document.getElementById("topper").value
 	document.getElementById("maintop").src="https://eggscentral.github.io/resources/case/"+topper+"top.png"
+	}
 	list.sort();
 	add = document.getElementById("quip").value
 	x = ""
